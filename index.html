@@ -3,99 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rhyzoe — Dev x Artist Portfolio</title>
+  <title>Rhyzoe Universe | Dev x Artist Portfolio</title>
   <style>
-    /* Base styling */
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
     body {
-      margin: 0;
-      background: #111;
-      color: #eee;
-      font-family: 'Roboto Slab', serif;
-      line-height: 1.6;
-      scroll-behavior: smooth;
+      margin: 0; background: #111; color: #eee; font-family: 'Roboto Slab', serif; line-height: 1.6; scroll-behavior: smooth;
     }
     a {
-      color: #ff3b3f;
-      text-decoration: none;
-      transition: color 0.3s ease;
+      color: #ff3b3f; text-decoration: none; transition: color 0.3s ease;
     }
     a:hover {
-      color: #ff6668;
-      text-decoration: underline;
+      color: #ff6668; text-decoration: underline;
     }
     header {
-      background: #1a1a1a;
-      border-bottom: 3px solid #ff3b3f;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      letter-spacing: 0.15em;
+      background: #1a1a1a; border-bottom: 3px solid #ff3b3f; padding: 1.5rem 1rem; text-align: center; position: sticky; top: 0; z-index: 10;
       text-shadow: 0 0 10px #ff3b3f;
     }
+    header h1 {
+      margin: 0; font-size: 3rem; letter-spacing: 0.15em;
+    }
     header p {
-      margin-top: 0.25rem;
-      font-style: italic;
-      color: #ff6668;
-      font-weight: 600;
+      margin-top: 0.25rem; font-style: italic; color: #ff6668; font-weight: 600;
+    }
+    nav {
+      background: #222; display: flex; justify-content: center; gap: 2rem; padding: 0.75rem 0; position: sticky; top: 65px; z-index: 9;
+      border-bottom: 1px solid #333;
+    }
+    nav a {
+      font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 3px;
+    }
+    nav a:hover, nav a.active {
+      background: #ff3b3f; box-shadow: 0 0 8px #ff3b3f;
+      color: #fff;
     }
     main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      max-width: 900px; margin: 2rem auto; padding: 0 1rem;
     }
     section {
-      margin-bottom: 3rem;
-      border-bottom: 1px solid #333;
-      padding-bottom: 2rem;
+      margin-bottom: 3rem; border-bottom: 1px solid #333; padding-bottom: 2rem;
     }
     h2 {
-      color: #ff3b3f;
-      margin-bottom: 1rem;
-      font-size: 2rem;
-      border-left: 5px solid #ff3b3f;
-      padding-left: 0.75rem;
+      color: #ff3b3f; margin-bottom: 1rem; font-size: 2rem; border-left: 5px solid #ff3b3f; padding-left: 0.75rem;
       text-shadow: 0 0 6px #ff3b3f;
     }
     ul {
-      list-style: none;
-      padding-left: 0;
+      list-style: none; padding-left: 0;
     }
     li {
-      margin-bottom: 0.7rem;
-      font-weight: 500;
+      margin-bottom: 0.7rem; font-weight: 500;
     }
     .project-title {
-      font-weight: 700;
-      color: #ffa3a6;
+      font-weight: 700; color: #ffa3a6;
     }
     .btn-download {
-      display: inline-block;
-      background: #ff3b3f;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      font-weight: 600;
-      box-shadow: 0 0 8px #ff3b3f;
-      margin-top: 1rem;
-      transition: background 0.3s ease;
+      display: inline-block; background: #ff3b3f; padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600;
+      box-shadow: 0 0 8px #ff3b3f; margin-top: 1rem; transition: background 0.3s ease;
     }
     .btn-download:hover {
-      background: #ff6668;
-      box-shadow: 0 0 12px #ff6668;
+      background: #ff6668; box-shadow: 0 0 12px #ff6668;
     }
     footer {
-      text-align: center;
-      color: #555;
-      font-size: 0.9rem;
-      padding: 1rem 1rem 2rem;
-      border-top: 1px solid #333;
-      user-select: none;
+      text-align: center; color: #555; font-size: 0.9rem; padding: 1rem 1rem 2rem; border-top: 1px solid #333; user-select: none;
     }
     /* Responsive */
     @media (max-width: 600px) {
@@ -105,18 +73,46 @@
       h2 {
         font-size: 1.5rem;
       }
+      nav {
+        gap: 1rem;
+      }
     }
   </style>
+  <script>
+    // Simple active nav highlight on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+
+      function onScroll() {
+        let scrollPos = window.scrollY + 80;
+        sections.forEach((section, index) => {
+          if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            navLinks[index].classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', onScroll);
+    });
+  </script>
 </head>
 <body>
 
 <header>
-  <h1>Rhyzoe</h1>
-  <p>Developer + Rapper | Web & IT Support | Creator of Zayat Vibes & LatYar</p>
+  <h1>Rhyzoe Universe</h1>
+  <p>Dev + Rapper | Web & IT Support | Creator of Zayat Vibes & LatYar</p>
 </header>
 
-<main>
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#tech-stack">Tech Stack</a>
+  <a href="#projects">Projects</a>
+  <a href="#music">Music</a>
+  <a href="#contact">Contact</a>
+</nav>
 
+<main>
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -124,6 +120,9 @@
       A digital artisan with a traditional soul, mixing the solid foundation of Laravel, PHP, and modern web tech  
       with the poetic flows of hip-hop culture.  
       Building not just apps, but legacies.
+    </p>
+    <p>
+      Creator of <strong>Zayat Vibes</strong> and <strong>LatYar</strong> — brands that blend culture, music, and tech into a cosmic experience.
     </p>
   </section>
 
@@ -163,6 +162,7 @@
       <li><a href="https://open.spotify.com/artist/your-spotify-id" target="_blank" rel="noopener noreferrer">Spotify</a></li>
       <li><a href="https://music.apple.com/artist/your-apple-music-id" target="_blank" rel="noopener noreferrer">Apple Music</a></li>
       <li><a href="https://www.youtube.com/channel/your-youtube-id" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      <li><a href="https://www.instagram.com/mgrhyzoe" target="_blank" rel="noopener noreferrer">Instagram</a></li>
     </ul>
   </section>
 
@@ -170,11 +170,9 @@
     <h2>Contact Me</h2>
     <ul>
       <li>LINE: @rhyzoe</li>
-      <li>Instagram: <a href="https://www.instagram.com/mgrhyzoe" target="_blank" rel="noopener noreferrer">@mgrhyzoe</a></li>
       <li>Email: <a href="mailto:rhyzoe@example.com">rhyzoe@example.com</a></li>
     </ul>
   </section>
-
 </main>
 
 <footer>
