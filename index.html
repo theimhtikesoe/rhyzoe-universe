@@ -2,193 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rhyzoe Universe | Dev x Artist Portfolio</title>
-  <style>
-    /* same styling as before */
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-    body {
-      margin: 0; background: #111; color: #eee; font-family: 'Roboto Slab', serif; line-height: 1.6; scroll-behavior: smooth;
-    }
-    a {
-      color: #ff3b3f; text-decoration: none; transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #ff6668; text-decoration: underline;
-    }
-    header {
-      background: #1a1a1a; border-bottom: 3px solid #ff3b3f; padding: 1.5rem 1rem; text-align: center; position: sticky; top: 0; z-index: 10;
-      text-shadow: 0 0 10px #ff3b3f;
-    }
-    header h1 {
-      margin: 0; font-size: 3rem; letter-spacing: 0.15em;
-    }
-    header p {
-      margin-top: 0.25rem; font-style: italic; color: #ff6668; font-weight: 600;
-    }
-    nav {
-      background: #222; display: flex; justify-content: center; gap: 2rem; padding: 0.75rem 0; position: sticky; top: 65px; z-index: 9;
-      border-bottom: 1px solid #333;
-    }
-    nav a {
-      font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 3px;
-    }
-    nav a:hover, nav a.active {
-      background: #ff3b3f; box-shadow: 0 0 8px #ff3b3f;
-      color: #fff;
-    }
-    main {
-      max-width: 900px; margin: 2rem auto; padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3rem; border-bottom: 1px solid #333; padding-bottom: 2rem;
-    }
-    h2 {
-      color: #ff3b3f; margin-bottom: 1rem; font-size: 2rem; border-left: 5px solid #ff3b3f; padding-left: 0.75rem;
-      text-shadow: 0 0 6px #ff3b3f;
-    }
-    ul {
-      list-style: none; padding-left: 0;
-    }
-    li {
-      margin-bottom: 0.7rem; font-weight: 500;
-    }
-    .project-title {
-      font-weight: 700; color: #ffa3a6;
-    }
-    .btn-download {
-      display: inline-block; background: #ff3b3f; padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600;
-      box-shadow: 0 0 8px #ff3b3f; margin-top: 1rem; transition: background 0.3s ease;
-    }
-    .btn-download:hover {
-      background: #ff6668; box-shadow: 0 0 12px #ff6668;
-    }
-    footer {
-      text-align: center; color: #555; font-size: 0.9rem; padding: 1rem 1rem 2rem; border-top: 1px solid #333; user-select: none;
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.25rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      nav {
-        gap: 1rem;
-      }
-    }
-  </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('nav a');
-
-      function onScroll() {
-        let scrollPos = window.scrollY + 80;
-        sections.forEach((section, index) => {
-          if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-            navLinks.forEach(link => link.classList.remove('active'));
-            navLinks[index].classList.add('active');
-          }
-        });
-      }
-      window.addEventListener('scroll', onScroll);
-    });
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhyzoe | Dev x Artist</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-black text-white font-sans">
+  <!-- Header -->
+  <header class="p-6 flex justify-between items-center border-b border-gray-700">
+    <h1 class="text-3xl font-bold text-red-500">Rhyzoe</h1>
+    <nav class="flex gap-4 text-xl">
+      <a href="#projects" class="hover:text-red-400">Projects</a>
+      <a href="#music" class="hover:text-red-400">Music</a>
+      <a href="#connect" class="hover:text-red-400">Connect</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Rhyzoe Universe</h1>
-  <p>Dev + Rapper | Web & IT Support | Creator of Zayat Vibes & LatYar</p>
-</header>
-
-<nav>
-  <a href="#about">About Me</a>
-  <a href="#tech-stack">Tech Stack</a>
-  <a href="#projects">Projects</a>
-  <a href="#newlife-project">NewLife Project</a>
-  <a href="#music">Music</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<main>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Bridging the classic craft of coding and lyrical storytelling.  
-      A digital artisan with a traditional soul, mixing the solid foundation of Laravel, PHP, and modern web tech  
-      with the poetic flows of hip-hop culture.  
-      Building not just apps, but legacies.
-    </p>
-    <p>
-      Creator of <strong>Zayat Vibes</strong> and <strong>LatYar</strong> — brands that blend culture, music, and tech into a cosmic experience.
-    </p>
+  <!-- Hero Section -->
+  <section class="text-center py-16 px-4">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4">Code. Rap. Vision.</h2>
+    <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">I build systems with logic and deliver emotions with rhythm. Welcome to the world of Rhyzoe – where tech meets soul.</p>
   </section>
 
-  <section id="tech-stack">
-    <h2>Tech Stack & Skills</h2>
-    <ul>
-      <li>Laravel & PHP backend development</li>
-      <li>JavaScript (Vanilla & frameworks)</li>
-      <li>POS Systems & IT Support</li>
-      <li>Version Control: GitHub</li>
-      <li>Music Production & Streaming (Spotify, Apple Music, YouTube)</li>
-    </ul>
-    <a class="btn-download" href="https://github.com/theimhtikesoe/your-resume.pdf" target="_blank" rel="noopener noreferrer" download>Download Resume (PDF)</a>
+  <!-- Projects Section -->
+  <section id="projects" class="px-6 py-10">
+    <h2 class="text-3xl text-red-400 font-semibold mb-6">🧩 Projects</h2>
+
+    <div class="bg-gray-900 p-6 rounded-lg mb-6">
+      <h3 class="text-2xl font-bold mb-1">New Life POS & E-Commerce System</h3>
+      <p class="text-sm text-gray-300 mb-2">Client: New Life Drinking Water Factory</p>
+      <p class="mb-2">An integrated POS system with Laravel, PHP, MySQL and Admin Dashboard. Handles orders, sales, and inventory for a real business.</p>
+      <a href="https://github.com/theimhtikesoe/New_Life_Taunggyi" class="text-blue-400 underline">View on GitHub</a>
+    </div>
+
+    <div class="bg-gray-900 p-6 rounded-lg mb-6">
+      <h3 class="text-2xl font-bold mb-1">Lyrics-Library</h3>
+      <p class="text-sm text-gray-300 mb-2">Personal Dev x Artist Project</p>
+      <p class="mb-2">Organize and publish your own lyrics. Dev meets soul. Artist portfolio backed by structured code.</p>
+      <a href="https://github.com/theimhtikesoe/lyrics-library" class="text-blue-400 underline">View on GitHub</a>
+    </div>
+
+    <!-- More projects like LatYar-Merch or SmartOrtho can go here -->
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <span class="project-title">Lyrics-Library</span> — Repository of poetic rap lyrics blending Burmese and English.  
-        <a href="https://github.com/theimhtikesoe/lyrics-library" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </li>
-      <li>
-        <span class="project-title">SmartOrtho Series</span> — 3D printed oral care products combining healthcare and AI-driven design.  
-        <em>Details & demos coming soon.</em>
-      </li>
-    </ul>
+  <!-- Music Section -->
+  <section id="music" class="px-6 py-10 bg-gray-900">
+    <h2 class="text-3xl text-red-400 font-semibold mb-6">🎧 Music</h2>
+    <div class="flex flex-wrap gap-4">
+      <a href="https://open.spotify.com/artist/6nyd1OiXag3LVVhASA1HQ9" target="_blank"><img src="/img/spotify.png" alt="Spotify" class="w-20 h-20" /></a>
+      <a href="https://music.apple.com/mm/artist/rhyzoe/1585617412" target="_blank"><img src="/img/applemusic.png" alt="Apple Music" class="w-20 h-20" /></a>
+      <a href="https://youtube.com/@rhyzoeinburma" target="_blank"><img src="/img/youtube.png" alt="YouTube" class="w-20 h-20" /></a>
+    </div>
+    <div class="mt-6">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6nyd1OiXag3LVVhASA1HQ9?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
   </section>
 
-  <section id="newlife-project">
-    <h2>New Life Taunggyi POS System</h2>
-    <p>
-      Laravel-based Point of Sale platform with real-time stock management and sales tracking — built for New Life Plastic Drinking Water Bottle Manufacturer.
-    </p>
-    <ul>
-      <li><strong>Tech Stack:</strong> Laravel, PHP, JavaScript, MySQL</li>
-      <li><strong>Key Features:</strong> Role-based login, cart management, sales chart, CSV export, product filtering</li>
-      <li><strong>Deployment:</strong> <a href="https://newlife.yourdomain.com" target="_blank" rel="noopener noreferrer">Live Demo (if any)</a></li>
-      <li><strong>Source Code:</strong> <a href="https://github.com/theimhtikesoe/New_Life_Taunggyi" target="_blank" rel="noopener noreferrer">GitHub Repo</a></li>
-    </ul>
-    <a class="btn-download" href="path/to/NewLife_Project.pdf" target="_blank" rel="noopener noreferrer" download>Download Project PDF</a>
+  <!-- Connect Section -->
+  <section id="connect" class="px-6 py-10">
+    <h2 class="text-3xl text-red-400 font-semibold mb-6">🔗 Connect</h2>
+    <div class="flex gap-6 text-2xl">
+      <a href="https://github.com/theimhtikesoe" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/mgrhyzoe" target="_blank"><i class="fab fa-instagram text-pink-400"></i></a>
+      <a href="https://youtube.com/@rhyzoeinburma" target="_blank"><i class="fab fa-youtube text-red-500"></i></a>
+      <a href="https://open.spotify.com/artist/6nyd1OiXag3LVVhASA1HQ9" target="_blank"><i class="fab fa-spotify text-green-400"></i></a>
+      <a href="https://music.apple.com/mm/artist/rhyzoe/1585617412" target="_blank"><i class="fab fa-apple"></i></a>
+      <a href="https://line.me/ti/p/DaXybLSsSJ" target="_blank"><img src="/img/line-icon.svg" alt="LINE" class="inline w-6 h-6" /></a>
+    </div>
   </section>
 
-  <section id="music">
-    <h2>Music & Streaming</h2>
-    <ul>
-      <li><a href="https://open.spotify.com/artist/your-spotify-id" target="_blank" rel="noopener noreferrer">Spotify</a></li>
-      <li><a href="https://music.apple.com/artist/your-apple-music-id" target="_blank" rel="noopener noreferrer">Apple Music</a></li>
-      <li><a href="https://www.youtube.com/channel/your-youtube-id" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-      <li><a href="https://www.instagram.com/mgrhyzoe" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <ul>
-      <li>LINE: @rhyzoe</li>
-      <li>Email: <a href="mailto:rhyzoe@example.com">rhyzoe@example.com</a></li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 Rhyzoe. Built with passion & code.</p>
-</footer>
-
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
+    &copy; 2025 Rhyzoe — Built with code & soul.
+  </footer>
 </body>
 </html>
