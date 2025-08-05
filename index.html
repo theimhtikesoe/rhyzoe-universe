@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rhyzoe Universe | Dev x Artist Portfolio</title>
   <style>
+    /* same styling as before */
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
     body {
       margin: 0; background: #111; color: #eee; font-family: 'Roboto Slab', serif; line-height: 1.6; scroll-behavior: smooth;
@@ -79,7 +80,6 @@
     }
   </style>
   <script>
-    // Simple active nav highlight on scroll
     document.addEventListener('DOMContentLoaded', () => {
       const sections = document.querySelectorAll('section');
       const navLinks = document.querySelectorAll('nav a');
@@ -108,6 +108,7 @@
   <a href="#about">About Me</a>
   <a href="#tech-stack">Tech Stack</a>
   <a href="#projects">Projects</a>
+  <a href="#newlife-project">NewLife Project</a>
   <a href="#music">Music</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -142,10 +143,6 @@
     <h2>Projects</h2>
     <ul>
       <li>
-        <span class="project-title">New Life Taunggyi POS System</span> — Laravel-based POS platform with stock & sales tracking.  
-        <a href="https://github.com/theimhtikesoe/New_Life_Taunggyi" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </li>
-      <li>
         <span class="project-title">Lyrics-Library</span> — Repository of poetic rap lyrics blending Burmese and English.  
         <a href="https://github.com/theimhtikesoe/lyrics-library" target="_blank" rel="noopener noreferrer">GitHub</a>
       </li>
@@ -154,6 +151,20 @@
         <em>Details & demos coming soon.</em>
       </li>
     </ul>
+  </section>
+
+  <section id="newlife-project">
+    <h2>New Life Taunggyi POS System</h2>
+    <p>
+      Laravel-based Point of Sale platform with real-time stock management and sales tracking — built for New Life Plastic Drinking Water Bottle Manufacturer.
+    </p>
+    <ul>
+      <li><strong>Tech Stack:</strong> Laravel, PHP, JavaScript, MySQL</li>
+      <li><strong>Key Features:</strong> Role-based login, cart management, sales chart, CSV export, product filtering</li>
+      <li><strong>Deployment:</strong> <a href="https://newlife.yourdomain.com" target="_blank" rel="noopener noreferrer">Live Demo (if any)</a></li>
+      <li><strong>Source Code:</strong> <a href="https://github.com/theimhtikesoe/New_Life_Taunggyi" target="_blank" rel="noopener noreferrer">GitHub Repo</a></li>
+    </ul>
+    <a class="btn-download" href="path/to/NewLife_Project.pdf" target="_blank" rel="noopener noreferrer" download>Download Project PDF</a>
   </section>
 
   <section id="music">
